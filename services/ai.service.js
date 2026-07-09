@@ -55,7 +55,7 @@ const generateText = async (prompt, temperature = 0.7) => {
   }
 };
 
-export const genereateLeadSummary = async (lead) => {
+export const generateLeadSummary = async (lead) => {
   const prompt = `You are an expert B2B sales analyst for a CRM called TTP CRM.
   Analyse the following sales lead and produce a concise assessment.
   
