@@ -34,7 +34,7 @@ export const getOverview = asyncHandler(async (req, res) => {
   const conversionRate = closed ? Math.round((won / closed) * 100) : 0;
 
   const months = lastSixMonths();
-  const trend = months.map(({ key, label }) => ({ months: label, leads: 0, won: 0 }));
+  const trend = months.map(({ key, label }) => ({ month: label, leads: 0, won: 0 }));
   const indexByKey = Object.fromEntries(months.map((m, i) => [m.key, i]));
 
   for (const l of leads) {
