@@ -11,6 +11,8 @@ import noteRoutes from "./routes/note.routes.js";
 import taskRoutes from "./routes/task.routes.js"
 import aiRoutes from "./routes/ai.routes.js"
 
+import analyticsRoutes from "./routes/analytics.routes.js"
+
 const app = express();
 
 app.use(
@@ -36,6 +38,7 @@ app.use("/api/notes", noteRoutes);
 app.use("/api/tasks", taskRoutes);
 
 app.use("/api/ai", aiRoutes)
+app.use("/api/analytics", analyticsRoutes);
 
 // Error Handling
 app.use(notFound);
